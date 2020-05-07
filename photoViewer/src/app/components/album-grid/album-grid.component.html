@@ -1,1 +1,10 @@
-<p>album-grid works!</p>
+<h1>CANCION <small>GRID VIEW</small></h1>
+
+<div class="card-columns">
+<div *ngFor="let cancion of canciones" class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ cancion.title }}</h5>
+      <button  (click)="verCancion(cancion.url)"> IR A LA CANCION</button>
+    </div>
+  </div>
+</div>
