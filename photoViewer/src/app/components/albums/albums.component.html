@@ -1,0 +1,12 @@
+<h1>ALBUMS <small>LIST VIEW</small></h1>
+
+<div class="card-columns">
+<div *ngFor="let album of datos" class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ album.name }}</h5>
+      <a [routerLink]="['/albumGrid',album._id]" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+
