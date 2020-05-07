@@ -28,14 +28,18 @@ export class AlbumGridComponent implements OnInit {
           aux.title=element.title;
           aux.url=element.url;
           aux.thumbnailUrl= element.thumbnailUrl;
+          aux.id=element.id;
           this.canciones.push(aux);
         }
       });
     });
   }
 
-  verCancion(url:string){
-      this.router.navigate(['/photo/',url]);
+  verCancion(cancion:CancionModel){
+      localStorage.setItem('photo',cancion.id);
+      localStorage.setItem('title',cancion.title);
+      localStorage.setItem('url',cancion.url);
+      this.router.navigate(['photo']);
   }
 
 }

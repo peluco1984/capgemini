@@ -1,10 +1,12 @@
 <h1>CANCION <small>GRID VIEW</small></h1>
-
+<button class="btn btn-primary" [routerLink]="['/albums']">REGRESAR</button>
 <div class="card-columns">
 <div *ngFor="let cancion of canciones" class="card" style="width: 18rem;">
     <div class="card-body">
+        <img class="card-img-top" [src]="cancion.thumbnailUrl" alt="Card image cap">
         <h5 class="card-title">{{ cancion.title }}</h5>
-      <button  (click)="verCancion(cancion.url)"> IR A LA CANCION</button>
+        
+      <button  (click)="verCancion(cancion)"> IR A LA CANCION</button>
     </div>
   </div>
 </div>

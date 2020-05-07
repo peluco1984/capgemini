@@ -1,1 +1,7 @@
-<p>photo works!</p>
+<h1>Cancion</h1>
+
+<button class="btn btn-primary" [routerLink]="['/albums']">REGRESAR</button>
+<div class="jumbotron">
+    <h1 class="display-4">{{cancion.title}}</h1>
+    <img [src]="cancion.url"/>
+  </div>

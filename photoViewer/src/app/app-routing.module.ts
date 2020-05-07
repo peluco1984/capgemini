@@ -8,7 +8,7 @@ import { PhotoComponent } from './components/photo/photo.component';
 const routes: Routes = [
   {path: 'albums', component: AlbumsComponent},
   {path: 'albumGrid/:id', component: AlbumGridComponent},
-  {path: 'photo/:id', component: PhotoComponent},
+  {path: 'photo', component: PhotoComponent},
   {path: '**', pathMatch:'full', redirectTo: 'albums'}
 ];
 
